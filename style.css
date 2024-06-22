@@ -13,18 +13,16 @@ body {
 .centered {
     margin: auto;
     width: max-content;
-    text-align: center;
 }
 
 .flipbook {
     margin: 3em auto;
-    width: 600px;
-    height: 450px;
+    width: 500px;
+    height: 400px;
     position: relative;
     transform-style: preserve-3d;
     perspective: 1000px;
 }
-
 .flipbook .leaf {
     position: absolute;
     transform-style: preserve-3d;
@@ -36,7 +34,6 @@ body {
     transform: rotate3d(0, 1, 0, 0deg);
     transform-origin: left 0px;
 }
-
 .flipbook .leaf .page {
     transform-style: preserve-3d;
     position: absolute;
@@ -44,23 +41,18 @@ body {
     height: 100%;
     top: 0;
 }
-
 .flipbook .leaf .page.front {
     transform: rotate3d(0, 1, 0, 0deg) translate3d(0, 0, 0.1px);
 }
-
 .flipbook .leaf .page.front:not(.external) {
     box-shadow: inset 5px 0px 5px -5px #0005;
 }
-
 .flipbook .leaf .page.back {
     transform: rotate3d(0, 1, 0, 180deg) translate3d(0, 0, 0.1px);
 }
-
 .flipbook .leaf .page.back:not(.external) {
     box-shadow: inset -5px 0px 5px -5px #0005;
 }
-
 .disabled {
     user-select: none;
     opacity: 0.6;
@@ -74,13 +66,18 @@ body {
 }
 
 .page {
-    padding: 2em;
+    padding: 1em;
+}
+
+.signature {
+    font-family: 'Great Vibes', cursive;
+    font-size: 24px; /* Adjust font size */
+    color: #000; /* Font color */
 }
 
 .page.front {
     border-radius: 0em 1em 1em 0;
 }
-
 .page.back {
     border-radius: 1em 0em 0em 1em;
 }
@@ -103,13 +100,57 @@ body {
     left: 0.75em;
 }
 
+.contents-row {
+    display: flex;
+    flex-flow: row nowrap;
+}
+.contents-row .spacer {
+    flex: 1 1;
+    height: 1em;
+    border-bottom: 1px dashed #000;
+}
+.contents-row .text {
+    flex: 0 0 auto;
+}
+
 h1, h2, h3 {
     font-family: cursive;
 }
 
-.signature {
-    font-family: 'Great Vibes', cursive;
-    font-size: 24px;
-    color: #000;
+body[onload] {
+    /*Cheesing the preview*/
+    transform: scale(1.5);
+    transform-origin: center top;
+}
+body[onload] .leaf:nth-child(1) {
+    transform: rotate3d(0, 1, 0, -128deg) !important;
+}
+body[onload] .leaf:nth-child(2) {
+    transform: rotate3d(0, 1, 0, -70deg) !important;
+}
+body[onload] .leaf:nth-child(3) {
+    transform: rotate3d(0, 1, 0, -40deg) !important;
+}
+body[onload] div.leaf:nth-child(4) > div:nth-child(1) {
+    background-color: #e76f51;
 }
 
+.cd__intro {
+    background-color: #c0e;
+}
+
+.return-button {
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #264653;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s;
+}
+
+.return-button:hover {
+    background-color: #2a9d8f;
+}

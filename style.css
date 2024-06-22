@@ -17,7 +17,8 @@ body {
 
 .flipbook {
     margin: 3em auto;
-    width: 500px;
+    width: 100%;
+    max-width: 500px; /* Change this to suit mobile */
     height: 400px;
     position: relative;
     transform-style: preserve-3d;
@@ -153,4 +154,26 @@ body[onload] div.leaf:nth-child(4) > div:nth-child(1) {
 
 .return-button:hover {
     background-color: #2a9d8f;
+}
+
+/* Media Queries for Responsive Design */
+@media (max-width: 600px) {
+    .flipbook {
+        width: 100%;
+        height: auto;
+    }
+
+    .flipbook .leaf {
+        width: 100%;
+    }
+
+    .flipbook .leaf .page {
+        height: auto;
+        padding: 1em;
+    }
+
+    .return-button {
+        font-size: 14px;
+        padding: 8px 16px;
+    }
 }

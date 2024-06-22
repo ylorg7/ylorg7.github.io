@@ -106,3 +106,10 @@ body {
 h1, h2, h3 {
     font-family: cursive;
 }
+
+.signature {
+    font-family: 'Great Vibes', cursive;
+    font-size: 24px;
+    color: #000;
+}
+

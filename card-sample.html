@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prefixfree/1.0.7/prefixfree.min.js"></script>
+</head>
+<body>
+<div class="flipbook centered" id="flipbook">
+    <div class="leaf">
+        <div class="page front title external" style="background-color:#e76f51;">
+            <h1>Name</h1>
+            <em>Abstract</em>
+        </div>
+        <div class="page back" style="background-color:#2a9d8f;">
+            <div class="pageNumber">1</div>
+            <img src="https://picsum.photos/200/301" alt="" style="width:100%">
+        </div>
+    </div>
+    <div class="leaf">
+        <div class="page front" style="background-color:#2a9d8f;">
+            <div class="pageNumber">2</div>
+            <p>
+                Page 1 context
+            </p>
+        </div>
+        <div class="page back" style="background-color:#e9c46a;">
+            <div class="pageNumber">3</div>
+            <p>
+                Page 2 context
+            </p>
+        </div>
+    </div>
+    <div class="leaf">
+        <div class="page front" style="background-color:#e9c46a;">
+            <div class="pageNumber">4</div>
+            <p>
+                Page 3 context
+            </p>
+            ending
+            <p>
+            <p>
+                Sincerely,
+            <p>
+            <p class="signature">
+                Gerry Leng
+            </p>
+            <button class="return-button" onclick="window.location.href='https://ylorg7.github.io/'">Return to Intro</button>
+        </div>
+        <div class="page back external" style="background-color:#f4a261;">
+            <div class="pageNumber">5</div>
+            <img src="https://picsum.photos/200/302" alt="" style="width:100%">
+        </div>
+    </div>
+</div>
+<div class="controls centered">
+    <button id="prevPage">&lt; Previous</button>
+    <button id="nextPage">Next &gt;</button>
+</div>
+<script src="script.js"></script>
+</body>
+</html>
